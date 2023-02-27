@@ -1,0 +1,3 @@
+[id^='u_'] -> id si    u_ ile başlayan  startWith
+[id*='u_'] -> id sinde u_ geçen         contains
+[id$='u_'] -> id si    u_ ile biten     endWith
