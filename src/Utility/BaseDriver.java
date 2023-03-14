@@ -1,9 +1,11 @@
 package Utility;
 
 import com.sun.deploy.security.ruleset.DefaultRule;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -21,10 +23,10 @@ public class BaseDriver {
 
         // gerekmeyen logları kaldıracağız. Yani Kırmızı hata gibi gözükenleri
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-
-        driver = new ChromeDriver();
-
-        driver.manage().window().maximize(); // açılan sayfayı tam ekran yapıyor.
+         ChromeOptions options = new ChromeOptions();
+         options.addArguments("--remote-allow-origins=*");
+         driver = new ChromeDriver(options);
+        // driver.manage().window().maximize(); // açılan sayfayı tam ekran yapıyor.
 
         Duration dr= Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(dr);
@@ -52,4 +54,13 @@ public class BaseDriver {
 
         }
     }
-}
+        public static boolean isAlertPresent(){
+            try{
+                driver.switchTo().alert();
+               return true;
+           }catch(NoAlertPresentException ex){
+                return false;
+            }
+       }
+    }
+
