@@ -38,7 +38,7 @@ public class _04_RobotClass extends BaseDriver {
             // mutlaka bu şekilde kullanılması gerekiyor. Tab a bastığında basılı kalıp sistem kitlenebiliyor
         }
           rbt.keyPress(KeyEvent.VK_ENTER); // tuşa basıldı. down
-        rbt.keyRelease(KeyEvent.VK_ENTER); // tuş bırakıldı.
+          rbt.keyRelease(KeyEvent.VK_ENTER); // tuş bırakıldı.
 
         // buraya kadar windows dosya bul açıldı
         // aşağıdaki bölüm dosyanın yolunu hafızaya kopyalıyor.

@@ -1,6 +1,10 @@
 package SeleniumSorular2;
 
 import Utility.BaseDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
 /*
 Bu websitesine gidiniz. http://demo.seleniumeasy.com/basic-first-form-demo.html
         List box'a tıklayınız.
@@ -25,4 +29,22 @@ Bu websitesine gidiniz. http://demo.seleniumeasy.com/basic-first-form-demo.html
 
  */
 public class Soru_13 extends BaseDriver {
+    @Test
+    public void Test1() {
+        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
+
+        WebElement listBox = driver.findElement(By.xpath("//*[text()='List Box']"));
+        listBox.click();
+
+        WebElement bootstrapList = driver.findElement(By.linkText("Bootstrap List Box"));
+        bootstrapList.click();
+
+        WebElement bootstrap = driver.findElement(By.xpath("//*[text()='bootstrap-duallist ']"));
+        bootstrap.click();
+
+        WebElement rightClick = driver.findElement(By.xpath("//button[@class='btn btn-default btn-sm move-right']"));
+        rightClick.click();
+
+
+    }
 }

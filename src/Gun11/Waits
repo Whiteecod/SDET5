@@ -1,0 +1,14 @@
+1- HTML (DOM) nini içinde locator olarak yüklenmesi
+   java hızlı çalıştığından problem oluyor
+   findElement
+
+2- kod olarak HTML içinde var ama , CROME tarafından
+   görüntülenmesi, yani gözükür hale gelmesi ayrı bir
+   durum.elemeanınhazır hale gelmesi
+   java hızlı çalıştığından problem oluyor
+   Click
+
+
+3- HTML içinde var görünür değil
+
+   Sayfanın değişim süresi
